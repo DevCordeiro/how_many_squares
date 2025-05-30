@@ -67,6 +67,10 @@ You should see a structure like this:
 ├── src/
 │   ├── squares.c
 │   └── main.c
+├── tests/
+│   └── test_squares.c
+├── bin/               
+├── build/
 ```
 
 
@@ -81,7 +85,24 @@ cmake ..
 make
 ```
 
-### 3. Run the Program
+### 3. Run the Tests
+
+After building, run the executable:
+``` bash
+./bin/test_runner
+```
+
+The expected console is:
+``` ini
+[PASS] n = 1 → 1 squares
+[PASS] n = 2 → 5 squares
+[PASS] n = 3 → 14 squares
+[PASS] n = 4 → 30 squares
+[PASS] n = 5 → 55 squares
+[PASS] n = 10 → 385 squares
+```
+
+### 4. Run the Program
 
 After builiding, run the executable:
 
