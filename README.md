@@ -43,3 +43,100 @@ Which is described by the formula:
 $$
 \sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}
 $$
+
+
+## Compiling and Running the Program
+
+Follow the steps below to compile and run the project on your machine.
+
+### 1. Clone the Repository
+
+Clone the project into a folder of your choice:
+
+```bash
+git clone https://github.com/DevCordeiro/how_many_squares.git
+cd how_many_squares
+```
+
+You should see a structure like this:
+
+``` bash 
+how_many_squares/
+├── CMakeLists.txt
+├── include/
+│   └── squares.h
+├── src/
+│   ├── squares.c
+│   └── main.c
+├── tests/
+│   └── unity   # Unity Framework
+│       └── src
+│           └── meson.build 
+│           └── unity_internals.h
+│           └── unity.c
+│           └── unity.h
+│   └── test_squares.c  
+│   └── test_unity.c    # Using Unity tests Framework
+├── bin/               
+├── build/
+```
+
+
+### 2. Building the Project
+
+Create a `build/` folder and compile the project using CMake:
+
+``` bash
+mkdir -p build
+cd build
+cmake ..
+make
+```
+
+### 3. Run the Tests
+
+After building, run the executable:
+``` bash
+./bin/test_runner
+```
+
+The expected console is:
+``` ini
+[PASS] n = 1 → 1 squares
+[PASS] n = 2 → 5 squares
+[PASS] n = 3 → 14 squares
+[PASS] n = 4 → 30 squares
+[PASS] n = 5 → 55 squares
+[PASS] n = 10 → 385 squares
+```
+
+### Unity Tests Library
+You can also run tests using the Unity Test Framework. To do so, use the following command:
+
+``` bash
+./bin/test_unity
+``` 
+
+The expected console is: 
+
+``` ini
+../how_many_squares/tests/test_unity.c:35:testValue_OneSquare:PASS
+../how_many_squares/tests/test_unity.c:36:testValue_TwoSquare:PASS
+../how_many_squares/tests/test_unity.c:37:testValue_ThreeSquare:PASS
+../how_many_squares/tests/test_unity.c:38:testValue_FourSquare:PASS
+../how_many_squares/tests/test_unity.c:39:testValue_FiveSquare:PASS
+
+-----------------------
+5 Tests 0 Failures 0 Ignored
+OK
+```
+
+### 4. Run the Program
+
+After builiding, and test, run the executable:
+
+``` bash
+./bin/how_many_squares
+```
+
+_(!) Make sure the executable was correctly generated in the bin/ folder. If needed, check your CMakeLists.txt for output path configuration._
