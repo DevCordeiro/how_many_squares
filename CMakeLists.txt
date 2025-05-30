@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.10)
+project(HowManySquares C)
+
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR/bin})
+
+include_directories(include)
+
+add_library(squares src/squares.c)
+
+add_executable(how_many_squares src/main.c)
+target_link_libraries(how_many_squares squares)
