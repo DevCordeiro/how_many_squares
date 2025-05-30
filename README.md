@@ -43,3 +43,50 @@ Which is described by the formula:
 $$
 \sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}
 $$
+
+
+## Compiling and Running the Program
+
+Follow the steps below to compile and run the project on your machine.
+
+### 1. Clone the Repository
+
+Clone the project into a folder of your choice:
+
+```bash
+git clone https://github.com/DevCordeiro/how_many_squares.git
+cd how_many_squares
+```
+
+You should see a structure like this:
+
+``` how-many-squares/
+├── CMakeLists.txt
+├── include/
+│   └── squares.h
+├── src/
+│   ├── squares.c
+│   └── main.c
+```
+
+
+### 2. Building the Project
+
+Create a `build/` folder and compile the project using CMake:
+
+``` bash
+mkdir -p build
+cd build
+cmake ..
+make
+```
+
+### 3. Run the Program
+
+After builiding, run the executable:
+
+``` bash
+./bin/how_many_squares
+```
+
+_(!) Make sure the executable was correctly generated in the bin/ folder. If needed, check your CMakeLists.txt for output path configuration._
