@@ -9,12 +9,19 @@ This document provides an architectural overview of the project and outlines the
 ``` bash
 how-many-squares/
 ├── src/
-│ ├── main.c # Entry point: handles input/output
-│ └── squares.c # Core logic to compute total squares
+│   ├── main.c # Entry point: handles input/output
+│   └── squares.c # Core logic to compute total squares
 ├── include/
-│ └── squares.h # Function declaration (header file)
+│   └── squares.h # Function declaration (header file)
 ├── tests/
-│ └── test_squares.c # Unit test file using assertions
+│   └── unity   # Files of Unity Framework downloaded
+│       └── src
+│           └── meson.build 
+│           └── unity_internals.h
+│           └── unity.c
+│           └── unity.h
+│   └── test_squares.c # Unit test file
+│   └── test_unity.c    # Unity test file using Unity Framework
 ```
 
 ## Execution Flow
@@ -35,6 +42,8 @@ flowchart TD
     - `how_many_squares`: main program
 
     - `test_runner`: test if `count_squares()` is correct
+
+    - `test_unity`: test if `count_squares()` is correct using Unity Framework
 
 ## Dependencies
 - GCC compiler

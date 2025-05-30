@@ -14,5 +14,8 @@ target_link_libraries(how_many_squares squares)
 add_executable(test_runner tests/test_squares.c)
 target_link_libraries(test_runner squares)
 
+add_executable(test_unity tests/test_unity.c tests/unity/src/unity.c)
+target_link_libraries(test_unity squares)
+
 enable_testing()
 add_test(NAME SquaresTest COMMAND test_runner)

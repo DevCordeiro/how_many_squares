@@ -30,6 +30,7 @@ This is implemented iteratively in C for simplicity and performance.
 | `src/squares.c`         | Contains logic to calculate total number of squares        |
 | `include/squares.h`     | Header file with function declaration                      |
 | `tests/test_squares.c`  | Basic unit tests                           |
+| `tests/test_unity.c`    | Basic unit tests using Unity Framework                           |
 
 ---
 

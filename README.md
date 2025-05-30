@@ -60,7 +60,8 @@ cd how_many_squares
 
 You should see a structure like this:
 
-``` how-many-squares/
+``` bash 
+how_many_squares/
 ├── CMakeLists.txt
 ├── include/
 │   └── squares.h
@@ -68,7 +69,14 @@ You should see a structure like this:
 │   ├── squares.c
 │   └── main.c
 ├── tests/
-│   └── test_squares.c
+│   └── unity   # Unity Framework
+│       └── src
+│           └── meson.build 
+│           └── unity_internals.h
+│           └── unity.c
+│           └── unity.h
+│   └── test_squares.c  
+│   └── test_unity.c    # Using Unity tests Framework
 ├── bin/               
 ├── build/
 ```
@@ -102,9 +110,30 @@ The expected console is:
 [PASS] n = 10 → 385 squares
 ```
 
+### Unity Tests Library
+You can also run tests using the Unity Test Framework. To do so, use the following command:
+
+``` bash
+./bin/test_unity
+``` 
+
+The expected console is: 
+
+``` ini
+../how_many_squares/tests/test_unity.c:35:testValue_OneSquare:PASS
+../how_many_squares/tests/test_unity.c:36:testValue_TwoSquare:PASS
+../how_many_squares/tests/test_unity.c:37:testValue_ThreeSquare:PASS
+../how_many_squares/tests/test_unity.c:38:testValue_FourSquare:PASS
+../how_many_squares/tests/test_unity.c:39:testValue_FiveSquare:PASS
+
+-----------------------
+5 Tests 0 Failures 0 Ignored
+OK
+```
+
 ### 4. Run the Program
 
-After builiding, run the executable:
+After builiding, and test, run the executable:
 
 ``` bash
 ./bin/how_many_squares
