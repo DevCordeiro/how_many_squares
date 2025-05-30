@@ -19,7 +19,7 @@ how-many-squares/
 
 ## Execution Flow
 
-```mermaid
+```
 flowchart TD
     A[User runs the program] --> B[main.c reads input n]
     B --> C[Calls count_squares(n)]
