@@ -77,8 +77,6 @@ how_many_squares/
 │           └── unity.h
 │   └── test_squares.c  
 │   └── test_unity.c    # Using Unity tests Framework
-├── bin/               
-├── build/
 ```
 
 
