@@ -22,9 +22,9 @@ $$
 
 For $n = 3$, we calculate $k = 3 \times 3 = 3^2 = 9$, but again, there are more squares when we consider all possible combinations:
 
-- $1^2 = 1$ square of size 3×3  
+- $1^2 = 1$ square of size 1×1  
 - $2^2 = 4$ squares of size 2×2  
-- $3^2 = 9$ squares of size 1×1  
+- $3^2 = 9$ squares of size 3×3  
 
 Adding them all:
 
